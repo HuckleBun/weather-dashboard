@@ -5,10 +5,8 @@
 }
 
 .results-container {
-  border: 1px solid black;
-  width: 50%;
-  margin-top: 50px;
-  margin-left: 100px;
+  width: 75%;
+  margin-left: 50px;
 }
 
 .weather-img {
@@ -25,8 +23,10 @@
 }
 
 
-.input-container {
+.container {
   margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .searchCityText {

@@ -14,31 +14,33 @@
     </header>
 
     <main>
-        <div class="input-container">
-          <h1 class="searchCityText">Search for a City:</h1>
+        <div class="container">
+          <div class="input-container">
+            <h1 class="searchCityText">Search for a City:</h1>
   
-          <div class="input">
-            <input type="text" placeholder="Los Angeles" id="inputValue">
-            <input type="submit" value="Search" id="submit">
+            <div class="input">
+              <input type="text" placeholder="Los Angeles" id="inputValue">
+              <input type="submit" value="Search" id="submit">
+            </div>
+      
+            <h2 id="prevSearch">Previous Searches:</h1>
+      
+            <div id="recentSearch">
+              <ul id="recentList"></ul>
+            </div>
           </div>
-    
-          <h2 id="prevSearch">Previous Searches:</h1>
-    
-          <div id="recentSearch">
-            <ul id="recentList"></ul>
+
+          <div class="results-container">
+            <div class="inputResults">
+              <h1 class="inputName"></h1>
+              <h3 class="inputTemp"></h3>
+              <h3 class="inputWind"></h3>
+              <h3 class="inputHumidity"></h3>
+              <h3 class="inputIndex"></h3>
+            </div>
+      
+            <div class="forecastResults"></div>
           </div>
-        </div>
-  
-        <div class="results-container">
-          <div class="inputResults">
-            <h1 class="inputName"></h1>
-            <h3 class="inputTemp"></h3>
-            <h3 class="inputWind"></h3>
-            <h3 class="inputHumidity"></h3>
-            <h3 class="inputIndex"></h3>
-          </div>
-  
-          <div class="forecastResults"></div>
         </div>
     </main>
 
