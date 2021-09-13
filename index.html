@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Weather Dashboard</h1>
+    </header>
+
+    <main>
+        <div class="input-container">
+          <h1 class="searchCityText">Search for a City:</h1>
+  
+          <div class="input">
+            <input type="text" placeholder="Los Angeles" id="inputValue">
+            <input type="submit" value="Search" id="submit">
+          </div>
+    
+          <h2 id="prevSearch">Previous Searches:</h1>
+    
+          <div id="recentSearch">
+            <ul id="recentList"></ul>
+          </div>
+        </div>
+  
+        <div class="results-container">
+          <div class="inputResults">
+            <h1 class="inputName"></h1>
+            <h3 class="inputTemp"></h3>
+            <h3 class="inputWind"></h3>
+            <h3 class="inputHumidity"></h3>
+            <h3 class="inputIndex"></h3>
+          </div>
+  
+          <div class="forecastResults"></div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js" integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/plugin/utc.min.js" integrity="sha512-m00bfmYnAl3plEBlQfeQUhw/U2uvmw29V2+jxSWpAjankMWS+zAsjezbKWDEJNXqWq9o9qQZSOiA2RKDpa4D5w==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/plugin/timezone.min.js" integrity="sha512-pslqxxHAYPCxaSeFSmXXxDkLejD5dbFVC66aiVq0z4v7VTJBU+wqcG1OpNh4p3MjS2D6NCwz/H2QmSc7dXxryg==" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
