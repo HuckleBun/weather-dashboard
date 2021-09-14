@@ -14,6 +14,18 @@
   vertical-align: middle;
 }
 
+.uviGreen {
+  color: green;
+}
+
+.uviYellow {
+  color: rgb(119, 119, 34);
+}
+
+.uviRed {
+  color: red;
+}
+
 .inputName,
 .inputTemp,
 .inputWind,

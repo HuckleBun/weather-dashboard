@@ -63,7 +63,14 @@ function currentWeather(city, weather, timezone) {
     icon.setAttribute('class', 'weather-img');
     cityNameEl.append(icon)
 
-
+    if (uvi < 3) {
+        indexEl.classList.add('uviGreen');
+      } else if (uvi < 7) {
+        indexEl.classList.add('uviYellow');
+      } else {
+        indexEl.classList.add('uviRed');
+      }
+    
 }
 
 function forecastCard(forecast, timezone) {
