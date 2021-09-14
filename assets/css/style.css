@@ -22,6 +22,19 @@
   margin-bottom: 15px;
 }
 
+.forecastResults {
+  display: flex;
+  flex-direction: row;
+}
+
+.cardSpacing { 
+  margin-right: 20px;
+}
+
+.bgColor {
+  background-color: rgb(184, 184, 184);
+  border: 1px solid black;
+}
 
 .container {
   margin-top: 50px;

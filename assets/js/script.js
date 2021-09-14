@@ -66,20 +66,51 @@ function currentWeather(city, weather, timezone) {
 
 }
 
+function forecastCard(forecast, timezone) {
+    var unixTs = forecast.dt;
+    var iconUrl = `https://openweathermap.org/img/w/${forecast.weather[0].icon}.png`;
+    var iconDescription = forecast.weather[0].description;
+    var tempF = forecast.temp.day;
+    var { humidity } = forecast;
+    var windMph = forecast.wind_speed;
+
+    var forecastContainer = document.createElement('div');
+    var card = document.createElement('div');
+    var cardBody = document.createElement('div');
+    var cardTitle = document.createElement('h5');
+    var weatherIcon = document.createElement('img');
+    var tempEl = document.createElement('p');
+    var windEl = document.createElement('p');
+    var humidityEl = document.createElement('p');
+  
+    forecastContainer.append(card);
+    card.append(cardBody);
+    cardBody.append(cardTitle, weatherIcon, tempEl, windEl, humidityEl);
+  
+    card.setAttribute('class', 'cardSpacing bgColor');
+    cardTitle.textContent = dayjs.unix(unixTs).tz(timezone).format('M/D/YYYY');
+    weatherIcon.setAttribute('src', iconUrl);
+    weatherIcon.setAttribute('alt', iconDescription);
+    tempEl.textContent = `Temp: ${tempF} °F`;
+    windEl.textContent = `Wind: ${windMph} MPH`;
+    humidityEl.textContent = `Humidity: ${humidity} %`;
+  
+    forecastResults.append(forecastContainer);
+  }
+  
 function forecast(forecast, timezone) {
+
     var startDt = dayjs().tz(timezone).add(1, 'day').startOf('day').unix();
     var endDt = dayjs().tz(timezone).add(6, 'day').startOf('day').unix();
   
+    forecastResults.innerHTML = '';
     for (var i = 0; i < forecast.length; i++) {
       if (forecast[i].dt >= startDt && forecast[i].dt < endDt) {
         forecastCard(forecast[i], timezone);
       }
     }
 }
-
-function forecastCard() {
-    // ADD CODE HERE
-}
+  
 
 function renderItems(city, data) {
     currentWeather(city, data.current, data.timezone);
